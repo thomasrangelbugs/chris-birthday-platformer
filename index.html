@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#10152c" />
+    <title>CHRIS, O JOGO</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="game-shell" aria-label="CHRIS, O JOGO">
+      <canvas id="game" width="480" height="270"></canvas>
+      <div id="crt"></div>
+
+      <section id="title-screen" class="overlay active" aria-label="Tela inicial">
+        <div class="title-stack">
+          <p class="kicker">Uma fase especial</p>
+          <h1>CHRIS,<br />O JOGO</h1>
+          <div class="title-actions">
+            <button id="title-button" type="button">INICIAR</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="end-screen" class="overlay" aria-label="Tela final">
+        <div class="title-stack compact">
+          <div class="end-actions">
+            <button id="replay-button" type="button">JOGAR DE NOVO</button>
+            <button id="menu-button" type="button">TELA INICIAL</button>
+          </div>
+        </div>
+      </section>
+
+      <button id="fullscreen-button" type="button" aria-label="Tela cheia">
+        <span class="fullscreen-icon" aria-hidden="true"></span>
+      </button>
+
+      <section id="pause-overlay" class="game-overlay" aria-hidden="true" aria-label="Pausa">
+        <div class="pause-panel">
+          <p class="pause-title">PAUSADO</p>
+          <p class="pause-hint">START para continuar</p>
+        </div>
+      </section>
+
+      <section id="settings-overlay" class="game-overlay" aria-hidden="true" aria-label="Configurações">
+        <div class="settings-panel">
+          <h2 class="settings-title">CONFIGURAÇÃO</h2>
+          <div class="settings-row">
+            <span class="settings-label">Música</span>
+            <button id="setting-music-toggle" type="button" class="settings-toggle">Ligada</button>
+          </div>
+          <div class="settings-row">
+            <span class="settings-label">Volume</span>
+            <div class="settings-stepper">
+              <button id="setting-vol-down" type="button" aria-label="Diminuir volume">−</button>
+              <span id="setting-vol-value" class="settings-value">100%</span>
+              <button id="setting-vol-up" type="button" aria-label="Aumentar volume">+</button>
+            </div>
+          </div>
+          <div class="settings-row settings-row-wrap">
+            <span class="settings-label">Transparência dos botões (manual)</span>
+            <p class="settings-help">Menos = mais transparente</p>
+            <div class="settings-stepper">
+              <button id="setting-opacity-down" type="button" aria-label="Botões mais transparentes">−</button>
+              <span id="setting-opacity-value" class="settings-value">62%</span>
+              <button id="setting-opacity-up" type="button" aria-label="Botões mais visíveis">+</button>
+            </div>
+          </div>
+          <button id="settings-close" type="button" class="settings-close">FECHAR</button>
+          <p class="settings-keys">Teclas: O config · Esc ou P pausa</p>
+        </div>
+      </section>
+
+      <div id="touch-controls" aria-hidden="false">
+        <div id="stick-zone">
+          <div id="stick-base" aria-hidden="true">
+            <div id="stick-knob"></div>
+          </div>
+        </div>
+        <div id="system-pad" aria-hidden="true">
+          <button id="select-button" class="system-button select" type="button" tabindex="-1" aria-label="Configuração (SELECT)">
+            SELECT
+          </button>
+          <button id="start-button" class="system-button start" type="button" tabindex="-1" aria-label="Pausar (START)">
+            START
+          </button>
+        </div>
+        <div id="action-pad">
+          <button class="action-button jump" data-action="jump" data-label="A" type="button" aria-label="Pular">
+            <span></span>
+          </button>
+          <button class="action-button punch" data-action="punch" data-label="B" type="button" aria-label="Soco">
+            <span></span>
+          </button>
+          <button class="action-button special" data-action="special" data-label="X" type="button" aria-label="Especial">
+            <span></span>
+          </button>
+          <button class="action-button morph" data-action="morph" data-label="Y" type="button" aria-label="Transformar">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <audio
+      id="intro-audio"
+      src="intro.mp3"
+      preload="auto"
+      autoplay
+      loop
+      playsinline
+    ></audio>
+    <audio id="map-audio" src="mapatrilha.mp3" preload="auto" loop></audio>
+    <audio id="final-audio" src="final.mp3" preload="auto" loop></audio>
+    <script src="game.js"></script>
+  </body>
+</html>
