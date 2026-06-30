@@ -1,24 +1,42 @@
-# CHRIS, O JOGO
+﻿# Chris Birthday Platformer
 
-Jogo curto em HTML5 Canvas, feito para rodar direto na Netlify sem build.
+> Beat-em-up em HTML5 Canvas criado como homenagem de aniversario.
 
-## Publicar na Netlify
+## Sobre o projeto
 
-1. Envie esta pasta para um repositório.
-2. Na Netlify, escolha o repositório.
-3. Deixe o comando de build vazio.
-4. Use `.` como pasta de publicação.
+Jogo de acao side-scrolling desenvolvido em HTML5 Canvas como presente de aniversario. Combina combate corpo a corpo, pulos, ataques especiais, transformacao do personagem, trilha sonora sincronizada e creditos finais animados. Suporta teclado no desktop e controles touch no celular, com modo automatico e manual.
 
-O arquivo `netlify.toml` já aponta a publicação para a raiz do projeto.
+## Funcionalidades principais
 
-## Controles
+- Combate side-scrolling em HTML5 Canvas
+- Personagens Chris, Nico e Thomas
+- Controles teclado (WASD/setas) e touch mobile
+- Modo automatico e manual de jogo
+- Ataque especial e transformacao do personagem
+- Trilha sonora com creditos sincronizados
+- Deploy estatico sem build no Netlify
 
-- Na tela inicial, clique em `INICIAR`.
-- Durante a fase, use o botao `AUTO` ao lado da vida para alternar entre modo automatico e manual.
-- Movimento: setas ou WASD.
-- Soco: J ou Z.
-- Pulo: K, X ou espaço.
-- Especial: L ou C.
-- Transformar: I ou V quando o poder estiver cheio.
+## Tecnologias utilizadas
 
-No celular, vire a tela na horizontal e use o analógico e os botões touch.
+- HTML5 Canvas
+- CSS3
+- JavaScript
+- Netlify
+
+## Como executar
+
+Abra index.html no navegador. Controles: setas/WASD para mover, J/Z soco, K/X/espaco pulo.
+
+## Deploy / Demonstracao
+
+Publique a pasta raiz no Netlify (sem comando de build).
+
+## Repositorio
+
+[github.com/thomasrangelbugs/chris-birthday-platformer](https://github.com/thomasrangelbugs/chris-birthday-platformer)
+
+## Autor
+
+**Thomas Rangel Bugs**
+
+Desenvolvido para portfolio, estudo e pratica de desenvolvimento web/mobile.
