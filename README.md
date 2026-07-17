@@ -1,42 +1,62 @@
-﻿# Chris Birthday Platformer
+# Chris — O Jogo
 
-> Beat-em-up em HTML5 Canvas criado como homenagem de aniversario.
+Jogo de ação side-scrolling em Canvas criado como homenagem de aniversário, com combate, transformação, trilha e créditos.
 
-## Sobre o projeto
+## Estado do projeto
 
-Jogo de acao side-scrolling desenvolvido em HTML5 Canvas como presente de aniversario. Combina combate corpo a corpo, pulos, ataques especiais, transformacao do personagem, trilha sonora sincronizada e creditos finais animados. Suporta teclado no desktop e controles touch no celular, com modo automatico e manual.
+Aplicação web estática executada no navegador. O repositório não define etapa de instalação nem de compilação, salvo quando indicado abaixo.
 
-## Funcionalidades principais
+## Funcionalidades
 
-- Combate side-scrolling em HTML5 Canvas
+- Combate lateral
 - Personagens Chris, Nico e Thomas
-- Controles teclado (WASD/setas) e touch mobile
-- Modo automatico e manual de jogo
-- Ataque especial e transformacao do personagem
-- Trilha sonora com creditos sincronizados
-- Deploy estatico sem build no Netlify
+- Modo automático e manual
+- Ataque especial
+- Transformação
+- Controles desktop/touch
+- Créditos sincronizados
 
-## Tecnologias utilizadas
+## Tecnologias
 
 - HTML5 Canvas
-- CSS3
+- CSS
 - JavaScript
-- Netlify
+- Áudio HTML5
 
-## Como executar
+## Estrutura principal
 
-Abra index.html no navegador. Controles: setas/WASD para mover, J/Z soco, K/X/espaco pulo.
+- `index.html — shell`
+- `game.js — motor`
+- `styles.css — interface`
+- `chris.png e fundo.png — imagens`
+- `intro.mp3, mapatrilha.mp3 e final.mp3 — áudio`
+- `netlify.toml — deploy`
 
-## Deploy / Demonstracao
+## Executar localmente
 
-Publique a pasta raiz no Netlify (sem comando de build).
+Não há dependências de pacote nem comando de build registrado para este projeto. Abra `index.html` em um navegador moderno.
 
-## Repositorio
+## Controles
 
-[github.com/thomasrangelbugs/chris-birthday-platformer](https://github.com/thomasrangelbugs/chris-birthday-platformer)
+- Mover: setas ou WASD.
+- Soco: J ou Z.
+- Pulo: K, X ou espaço.
+- No celular, use os controles touch exibidos.
 
-## Autor
+## Testes
 
-**Thomas Rangel Bugs**
+Não foi identificado script de teste automatizado. Valide manualmente os fluxos descritos em **Como usar**, em desktop e em viewport móvel.
 
-Desenvolvido para portfolio, estudo e pratica de desenvolvimento web/mobile.
+## Publicação
+
+- O `netlify.toml` publica `.` sem build e configura cache longo para MP3.
+
+## Limitações e segurança
+
+- Autoplay de áudio pode ser bloqueado até a primeira interação.
+- Não há suíte automatizada.
+- Confirme autorização para redistribuir imagens e músicas.
+
+## Repositório
+
+[redobrai-del/thomas-projetos](https://github.com/redobrai-del/thomas-projetos)
